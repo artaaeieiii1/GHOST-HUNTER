@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ghost Hunter 👻</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- MENU -->
+    <div id="menu" class="card">
+
+        <div class="ghost-title">👻</div>
+
+        <h1>GHOST HUNTER</h1>
+
+        <p class="subtitle">
+            Tangkap hantu sebelum waktu habis!
+        </p>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="👤 Username"
+            maxlength="20"
+        >
+
+        <input
+            type="tel"
+            id="wa"
+            placeholder="📱 Nomor WhatsApp"
+            maxlength="15"
+        >
+
+        <button onclick="startGame()">
+            👻 MULAI BERBURU
+        </button>
+
+        <button class="leader-btn" onclick="showLeaderboard()">
+            🏆 LEADERBOARD
+        </button>
+
+        <p id="message"></p>
+
+    </div>
+
+
+    <!-- GAME -->
+    <div id="game" class="card hidden">
+
+        <div class="game-header">
+
+            <div>
+                👤 <span id="playerName">Player</span>
+            </div>
+
+            <div>
+                ⭐ <span id="score">0</span>
+            </div>
+
+            <div>
+                ⏱️ <span id="time">30</span>
+            </div>
+
+        </div>
+
+
+        <div id="gameArea">
+
+            <div id="ghost">
+                👻
+            </div>
+
+        </div>
+
+
+        <p class="instruction">
+            👻 Klik hantu sebanyak mungkin!
+        </p>
+
+        <button onclick="backMenu()">
+            ↩ KEMBALI
+        </button>
+
+    </div>
+
+
+    <!-- LEADERBOARD -->
+    <div id="leaderboard" class="card hidden">
+
+        <h1>🏆 LEADERBOARD</h1>
+
+        <p class="subtitle">
+            Pemburu hantu terbaik
+        </p>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Username</th>
+                    <th>Score</th>
+                    <th>Waktu</th>
+                </tr>
+            </thead>
+
+            <tbody id="leaderboardData">
+                <tr>
+                    <td colspan="4">
+                        Loading...
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <button onclick="backMenu()">
+            ↩ MENU UTAMA
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
